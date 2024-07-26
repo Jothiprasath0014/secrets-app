@@ -89,7 +89,7 @@ npm install
 - Create a database for the project.
 - Set up the database schema.
 
-### GSAP Animations Documentation
+### GSAP Animations
 
  ```GSAP (GreenSock Animation Platform)``` to create animations for various elements on a web page, including the logo, navbar items, title, description, button, image, and different sections of the page.
 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora Secrets Reel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Titan+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/reel.css">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="images/logo.jpg" alt="Aurora logo"> 
+      <p class="logo-name">Aurora Secrets</p>
+    </a>
+    <nav class="navbar">
+      <div id="close" class="fas fa-times"></div>
+      <a href="/" class="nav-items">Home</a>
+      <a href="#about" class="nav-items">About</a>
+      <a href="#contact" class="nav-items">Contact Us</a>
+      <a href="/authenticate" class="nav-items">Create Account</a>
+    </nav>
+    <div id="menu" class="fas fa-bars"></div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1>What's your secret?</h1>
+    <div class="card">
+      <p><%= secret %></p>
+    </div>
+    <p class="user"><%= user %></p>
+    <button class="btn" id="refresh-button">Refresh to see other Secrets...</button>
+  </main>
+
+  <hr />
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; <%= new Date().getFullYear() %>
+      Aurora Secrets. All rights reserved.</p>
+      <p>Follow us on:
+        <a href="#">Facebook</a> |
+        <a href="#">Twitter</a> |
+        <a href="#">Instagram</a>
+      </p>
+  </footer>
+
+  <script>
+    // Add event listener to the button to refresh the page
+    document.getElementById('refresh-button').addEventListener('click', function() {
+      location.reload();
+    });
+    
+    // Toggle navbar for mobile view
+    document.getElementById('menu').addEventListener('click', function() {
+      document.querySelector('.navbar').classList.toggle('active');
+    });
+  </script>
+</body>
+
+</html>

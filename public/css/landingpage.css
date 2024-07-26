@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+
+::-webkit-scrollbar {   
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(127, 255, 212, 0.921);
+    border-radius: 5px;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+/* Header */
+
+.header {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 9%;
+    z-index: 2;
+    background: black; /* Add background color to ensure header content is visible */
+}
+
+.header .logo img {
+    height: 6rem;
+    margin-left: 15px;
+}
+
+.header .logo .logo-name {
+    color: #fff;
+    font-size: medium;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: auto; /* Pushes the navbar to the right */
+}
+
+.header .navbar #close {
+    display: none;
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    cursor: pointer;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.header .navbar a {
+    margin-right: 2rem;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.header .navbar a:hover {
+    color: #d3ad7f;
+}
+
+.header #menu {
+    display: none;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+/* Search Section */
+.header .search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto; /* Pushes the search container to the right */
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* Adjust default width */
+}
+
+.search-btn {
+    padding: 10px 20px;
+    background-color: #d3ad7f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Home section */
+
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: hsla(222, 47%, 11%, 1);
+    color: hsla(217, 24%, 59%, 1);
+    overflow-y: overlay;
+}
+
+.home .content {
+    flex: 1 1 40rem;
+    padding-top: 6.5rem;
+}
+
+.home .content .title {
+    font-size: 6rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.home .content .title span {
+    text-transform: uppercase;
+    color: darkcyan;
+}
+
+.home .content .description {
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+.home .content .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: #d3ad7f;
+    cursor: pointer;
+}
+
+.home .content .btn:hover {
+    letter-spacing: .2rem;
+}
+
+.home .image {
+    flex: 1 1 40rem;
+}
+
+.home .image img {
+    width: 100%;
+}
+
+/* Featured Secrets Section */
+.featured-secrets {
+    padding: 4rem 9%;
+    background-color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.secrets-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.secret-card {
+    background-color: #d3ad7f;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    font-size: 1.2rem; 
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 4rem 9%;
+    background-color: #f5f5f5;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem; 
+}
+
+.testimonial-author {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* About Section */
+.about {
+    padding: 4rem 9%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about-description {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.8rem; 
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 9%;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.contact-description {
+    margin-bottom: 2rem;
+    font-size: 1.4rem; 
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #d3ad7f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer Section */
+
+.footer {
+    background-color: #fff8f8;
+    color: #fff;
+    padding: 1.5rem 0;
+  }
+  
+  .footer span.text-muted {
+    color: #fff;
+    font-size: 1.2rem; 
+  }
+  
+  .social-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-list li {
+    margin-right: 1rem;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    color: #434343;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-link ion-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-link:hover ion-icon {
+    color: currentColor;
+  }
+  
+  .social-link:hover .span {
+    color: currentColor;
+  }
+  
+  .social-link:hover {
+    color: initial;
+  }
+  
+  .social-link:hover[href*="github"] {
+    color: #333;
+  }
+  
+  .social-link:hover[href*="linkedin"] {
+    color: #0077b5;
+  }
+  
+  .social-link:hover[href*="mail"] {
+    color: #d44638;
+  }
+
+/* Responsive Media Queries */
+
+@media(max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 2rem;
+    }
+    section {
+        padding: 2rem;
+    }
+}
+
+@media(max-width: 768px) {
+    .header #menu {
+        display: inline-block;
+    }
+    .header .navbar {
+        position: fixed;
+        top: 0; right: -105%;
+        width: 30rem;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(50px);
+        transition: .5s;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        z-index: 1200;
+    }
+    .header .navbar.active {
+        right: 0;
+    }
+    .header .navbar #close {
+        display: block;
+    }
+    .header .navbar a {
+        display: block;
+        margin: 1rem 0; 
+        text-align: center;
+        font-size: 3rem;
+    }
+    .header .search-container {
+        display: none; /* Hide search bar in mobile view */
+    }
+    .home .content {
+        padding-top: 9.5rem;
+    }
+    .home .image img {
+        width: 368px;
+    }
+    .home .content .title {
+        font-size: 4rem;
+    }
+    .home .description {
+        font-size: 1.6rem;
+    }   
+}
+
+@media(max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}

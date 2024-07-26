@@ -1,0 +1,281 @@
+:root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  
+/* Adjust body to account for fixed header */
+body {
+  padding-top: 100px;
+  min-height: 100vh;
+  background: #212534;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+ /* Header Styling */
+ .header {
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 5px; /* Reduced padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1200;
+  height: 60px;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.header .logo img {
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 25px;
+}
+
+.header .logo .logo-name {
+  font-family: 'san-serif', cursive;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.header .navbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Adjust gap between nav items */
+  flex: 1;
+  justify-content: flex-end; /* Align nav items to the end */
+  padding-right: 20px;
+}
+
+.header .navbar a {
+  margin: 0; /* Remove margin around nav items */
+  font-size: 1rem; /* Adjust font size of nav items */
+  color: #fff;
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* Navbar Hover Effect */
+.header .navbar a:hover {
+  color: #d3ad7f;
+} 
+
+.header .navbar .nav-items {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.header .navbar .nav-items:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.header #menu {
+  display: none; /* Hide menu icon by default */
+  font-size: 1.5rem; /* Adjust size of menu icon */
+  cursor: pointer;
+  color: #fff;
+}
+
+  h1 {
+    color: white;
+    font-family: "Titan One", cursive;
+    margin-bottom: 20px;
+  }
+  .card {
+    background: url("../images/whisper-img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    font-family: "Gloria Hallelujah", cursive;
+  }
+  .card:hover {
+    color: rgba(180, 0, 0, 0.721);
+    transition: color 1s;
+  }
+  .card:hover:before,
+  .card:hover:after {
+    animation: none;
+    opacity: 0;
+  }
+  
+  .card::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2
+    );
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  .card::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2
+    );
+    opacity: 1;
+    transition: opacity 0.5s;
+    animation: spin 2.5s linear infinite;
+  }
+  @property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+  
+  a {
+    color: #212534;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 2rem;
+  }
+  
+  .user {
+    color: white;
+    font-size: 24px;
+    font-family: "Titan One", cursive;
+    padding-left: 50px;
+  }
+
+  /* Button Styling */
+.btn {
+    padding: 20px 25px;
+    background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.5s, transform 0.5s;
+    margin-left: 20px;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+    background: linear-gradient(45deg, #2575fc 0%, #6a11cb 100%);
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+.footer {
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 5px; /* Reduced padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1200;
+  height: 60px;
+}
+
+.footer p {
+  margin: 5px 20px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #ddd;
+}
+
+/* Responsive styling for mobile view */
+@media(max-width: 768px) {
+  .header .navbar {
+    display: none; /* Hide navbar items by default on mobile */
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px; /* Position below the header */
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+    gap: 1rem; /* Adjust gap between nav items in mobile view */
+  }
+  
+  .header .navbar.active {
+    display: flex; /* Show navbar items when menu icon is clicked */
+  }
+  
+  .header #menu {
+    display: block; /* Show menu icon on mobile */
+  }
+  
+  .header .navbar a {
+    font-size: 1.2rem; /* Adjust font size of nav items in mobile view */
+  }
+  
+  .header .navbar #close {
+    display: block; /* Show close icon on mobile */
+    font-size: 2rem; /* Adjust size of close icon */
+    color: #fff;
+  }
+}  

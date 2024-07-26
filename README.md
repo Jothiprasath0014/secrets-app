@@ -74,7 +74,7 @@ npm install
 * **Backend:** Node.js, Express.js
 * **Database:** PostgreSQL
 * **NPM Libraries:** body-parser, express, pg, ejs, axios, bcrypt, dotenv, express-session, passport, passport-google-oauth2, passport-local.
-* **API:** Open Library API => [API](https://secrets-api.appbrewery.com/random)
+* **API:** Open Library API => [API](https://secrets-api.appbrewery.com/)
 
 ### Prerequisites
 

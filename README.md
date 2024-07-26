@@ -87,7 +87,19 @@ npm install
 
 - Ensure PostgreSQL is installed and running.
 - Create a database for the project.
-- Set up the database schema
+- Set up the database schema.
+
+### GSAP Animations Documentation
+
+ ```GSAP (GreenSock Animation Platform)``` to create animations for various elements on a web page, including the logo, navbar items, title, description, button, image, and different sections of the page.
+
+**Register the ScrollTrigger plugin** 
+
+  - ScrollTrigger is a plugin for GSAP that allows you to trigger animations based on the user's scroll position. This plugin can create scroll-driven animations, pin elements during scroll, and synchronize animations with the scrollbar.
+  
+```
+gsap.registerPlugin(ScrollTrigger)
+```
 
 ### To start the server 
 

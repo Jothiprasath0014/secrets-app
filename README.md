@@ -142,16 +142,27 @@ After logging in, you can view random secrets by navigating to the /secrets page
 * **Delete Your Secrets:** On the /secrets page, you can delete any of your secrets.
 
 ## Screenshots
+### Home Page 
 
 ![secrets Home web page.](readme-image/home-page.png "This is a Secrets App Home web-page image.")
 
+### Hero Section Page 
+
 ![secrets hero-section web page.](readme-image/hero-section.png "This is a secrets hero-section web-page image.")
+
+### LogIn and Register Page
 
 ![secrets  login and register web page.](readme-image/login-and-register-page.png "This is a secrets app login-and-register web-page image.")
 
+### Submit page
+
 ![secrets submit web page.](readme-image/submit-page.png "This is a secrets submit  search-result web-page image.")
 
+### After Submit 
+
 ![secrets after-submit web page.](readme-image/after-submit-page.png "This is a secrets app after-submit-page web-page image.")
+
+### View Random Secrets
 
 ![secrets views web page.](readme-image/view-random-secrets.png "This is a secrets view-random-secrets web-page image.")
 
